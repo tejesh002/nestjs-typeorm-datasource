@@ -55,6 +55,11 @@ $ npm run typeorm_tenent:cli -- migration:generate src/migrations/tenented/
 # How to Test
 <p>
   create a new schema in your database
+</p>
+<p>
   Insert record into database;
+  
+</p>
+  <p>
   use the tenent name in your api using HEADER x-tenent-id
 </p>
