@@ -45,29 +45,21 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+# migration generate for public 
+$ npm run typeorm:cli -- migration:generate src/migrations/tenented/
 
-```bash
-# unit tests
-$ npm run test
+# migration generate for tenent
+$ npm run typeorm_tenent:cli -- migration:generate src/migrations/tenented/
 
-# e2e tests
-$ npm run test:e2e
 
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+# How to Test
+<p>
+  create a new schema in your database
+</p>
+<p>
+  Insert record into database;
+  
+</p>
+  <p>
+  use the tenent name in your api using HEADER x-tenent-id
+</p>
