@@ -17,7 +17,7 @@ async function bootstrap() {
     if (schema.startsWith('tenent_')) {
       const tenantId = schema.replace('tenant_', '');
       const connection = await getTenantConnection(tenantId);
-      console.info(connection.createQueryRunner().getTables());
+      // console.info(connection.createQueryRunner().getTables());
       await connection.runMigrations();
     }
   }

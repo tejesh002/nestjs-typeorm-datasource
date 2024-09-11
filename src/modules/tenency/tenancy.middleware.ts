@@ -13,10 +13,11 @@ export class tenancyMiddleware implements NestMiddleware {
   ): Promise<void> {
     const header = req.headers[TENANT_HEADER] as string;
 
+    console.info(header);
     // if (!parseInt(header)) {
     //   throw new ForbiddenException('Invalid Organization Code');
     // }
-    req['tenantId'] = 'test';
+    req['tenantId'] = header;
 
     next();
   }
